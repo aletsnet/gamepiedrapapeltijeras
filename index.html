@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Piedra, Papel o tijeras</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <div class="text-center">
+        <h1>Proyectos html/css/js/</h1>
+        <p>Alejandro López Ortiz</p>
+        <p>Programador</p>
+        <p>mail: <b>alejandro.bin@gmail.com </b></p>
+    </div>
+    <div id="main_start" class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <a class=" btn btn-danger text-light" onclick="$('#main_game').show(); $('#main_start').hide();">
+                    <i class="fa fa-star-half-empty"></i> Start
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="main_game" class="container" style="display: none;">
+        <div class="row">
+            <div class="col-sm-9 text-center">
+                <a class=" btn btn-success text-light" onclick="start();">
+                    <i class="fa fa-gamepad"></i> Jugar ahora
+                </a>
+            </div>
+            <div class="col-sm-3 text-right">
+                Tiempo: <label class="font-weight-bold" id="ltime">0</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <label class="">Puntos:</label> <label id="lpc_score" class="font-weight-bold">0</label>
+            </div>
+            <div class="col-sm-6">
+                <label class="">Puntos:</label> <label id="luser_score" class="font-weight-bold">0</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-5 text-center">
+                <label class=""><b>PC</b></label>
+                <img id="pc_img_game" src="img/default.png" class="col-sm-12 rounded mx-auto" />
+            </div>
+            <div class="col-sm-5 text-center">
+                <label class=""><b>User</b></label>
+                <img id="use_img_game" src="img/default.png" class="col-sm-12 rounded mx-auto" />
+            </div>
+            <div class="col-sm-2 text-center">
+                
+                <div id="mngame" class="btn-group btn-group-vertical" style="display: none;">
+                    <a href="#" onclick="stop(0);" class="btn btn-secondary "><i class="fa fa-hand-rock-o"></i> Piedra</a>
+                    <a href="#" onclick="stop(1);" class="btn btn-secondary"><i class="fa fa-hand-paper-o"></i> Papel</a>
+                    <a href="#" onclick="stop(2);" class="btn btn-secondary"><i class="fa fa-hand-scissors-o"></i> Tijeras</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    </script>
+</body>
+</html>
