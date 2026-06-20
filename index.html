@@ -6,9 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
-    <script src="js/jquery.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
 </head>
 <body>
@@ -21,7 +18,7 @@
     <div id="main_start" class="container">
         <div class="row">
             <div class="col-sm-12 text-center">
-                <a class=" btn btn-danger text-light" onclick="$('#main_game').show(); $('#main_start').hide();">
+                <a class=" btn btn-danger text-light" onclick="document.getElementById('main_game').style.display='';document.getElementById('main_start').style.display='none';">
                     <i class="fa fa-star-half-empty"></i> Start
                 </a>
             </div>
@@ -30,7 +27,7 @@
     <div id="main_game" class="container" style="display: none;">
         <div class="row">
             <div class="col-sm-9 text-center">
-                <a class=" btn btn-success text-light" onclick="start();">
+                <a id="btnStart" class=" btn btn-success text-light" onclick="start();">
                     <i class="fa fa-gamepad"></i> Jugar ahora
                 </a>
             </div>
@@ -65,7 +62,5 @@
             </div>
         </div>
     </div>
-    <script>
-    </script>
 </body>
 </html>

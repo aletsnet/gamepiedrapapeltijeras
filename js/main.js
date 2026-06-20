@@ -34,15 +34,15 @@
                 if(lm!="00"){ltimes = ltimes + lm + ":";}
                 if(ls!="00"){ltimes = ltimes + ls;}
                 
-                $("#ltime").html(ltimes);
+                document.getElementById('ltime').innerHTML = ltimes;
             }
             console.log("Star : " +start_game);
 		}
         
         function start(){
             start_game = true;
-            $("#mngame").show();
-            $("#btnStart").hide();
+            document.getElementById('mngame').style.display = '';
+            document.getElementById('btnStart').style.display = 'none';
         }
         
         function game(user1, user2){
@@ -88,21 +88,21 @@
             img_game = ["img/mano01.png", "img/mano02.png", "img/mano03.png"];
             
             start_game = false;
-            $("#mngame").hide();
-            $("#btnStart").show();
+            document.getElementById('mngame').style.display = 'none';
+            document.getElementById('btnStart').style.display = '';
             pc = Math.floor((Math.random() * 10) );
             pc = Math.floor(pc);            
             if(pc>=0 && pc<=3){pc=0;}
             if(pc>3 && pc<=6){pc=1;}
             if(pc>6 && pc<=9){pc=2;}
             
-            $("#pc_img_game").attr("src",img_game[pc]);
-            $("#use_img_game").attr("src",img_game[nivel]);
+            document.getElementById('pc_img_game').src = img_game[pc];
+            document.getElementById('use_img_game').src = img_game[nivel];
             
             game(pc, nivel);
             
-            $("#luser_score").html(user_score);
-            $("#lpc_score").html(pc_score);
+            document.getElementById('luser_score').innerHTML = user_score;
+            document.getElementById('lpc_score').innerHTML = pc_score;
         }
         
     setInterval(time,1000);
