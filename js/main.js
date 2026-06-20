@@ -1,20 +1,20 @@
 
-        var start_game = false;
-        var user_score = 0;
-        var pc_score = 0;
-        var s = 0;
-        var m = 0;
-        var h = 0;
-        var d = 0;
+        let start_game = false;
+        let user_score = 0;
+        let pc_score = 0;
+        let s = 0;
+        let m = 0;
+        let h = 0;
+        let d = 0;
         
-        function fhora(digito){
+        const fhora = (digito) => {
             ldigito = "";
             lcantidad = digito.toString();
             for(i=lcantidad.length; i<2; i++){ ldigito = "0" + ldigito; }
             return ldigito + digito.toString();
 		}
         
-		function time(){
+		const time = () => {
             if(start_game){
                 s++;
                 if(s==60){ m++; s=0; }
@@ -39,13 +39,13 @@
             console.log("Star : " +start_game);
 		}
         
-        function start(){
+        const start = () => {
             start_game = true;
             document.getElementById('mngame').style.display = '';
             document.getElementById('btnStart').style.display = 'none';
         }
         
-        function game(user1, user2){
+        const game = (user1, user2) => {
             switch(user1){
                 case 0:
                     //piedra
@@ -80,7 +80,7 @@
             console.log(pc_score + " : " + user_score);
         }
         
-        function stop(nivel){
+        const stop = (nivel) => {
             s = 0;
             m = 0;
             h = 0;
